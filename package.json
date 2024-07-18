@@ -12,14 +12,18 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "nuxt": "^3.12.3",
-    "vue": "latest"
+    "vue": "latest",
+    "vuetify-nuxt-module": "^0.15.2"
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.3.13",
     "@stylistic/eslint-plugin": "^2.3.0",
     "eslint": "^9.7.0",
     "typescript": "^5.5.3",
-    "vue-tsc": "^2.0.26"
+    "vite-plugin-vuetify": "^2.0.3",
+    "vue-tsc": "^2.0.26",
+    "vuetify": "^3.6.13"
   }
 }

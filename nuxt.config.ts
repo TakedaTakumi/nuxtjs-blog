@@ -3,16 +3,24 @@ export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
+  build: {
+    transpile: ['vuetify'],
+  },
   modules: [
-    '@nuxt/eslint'
+    '@nuxt/eslint',
+    'vuetify-nuxt-module',
   ],
-  typescript: { 
-    typeCheck: true
+  typescript: {
+    typeCheck: true,
   },
   eslint: {
     checker: true,
     config: {
-      stylistic: true
-    }
+      stylistic: true,
+    },
   },
-})
+  vuetify: {
+    moduleOptions: {},
+    vuetifyOptions: {},
+  },
+});
