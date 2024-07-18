@@ -12,5 +12,5 @@ COPY . ./
 
 RUN bun install
 
-CMD ["bun", "run", "dev", "-o"]
+CMD ["bun", "run", "dev", "-o", "--host", "0.0.0.0"]
 
