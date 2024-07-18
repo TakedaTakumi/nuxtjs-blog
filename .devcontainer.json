@@ -1,0 +1,96 @@
+// cSpell:words devcontainer
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/docker-existing-docker-compose
+// If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
+{
+  "name": "Nuxt Blog Template",
+
+  // Update the 'dockerComposeFile' list if you have more compose files or use different names.
+  // The .devcontainer/docker-compose.yml file contains any overrides you need/want to make.
+  "dockerComposeFile": "./compose.yaml",
+
+  // The 'service' property is the name of the service for the container that VS Code should
+  // use. Update this value and .devcontainer/docker-compose.yml to the real service name.
+  "service": "frontend",
+
+  // The optional 'workspaceFolder' property is the path VS Code should open by default when
+  // connected. This is typically a file mount in .devcontainer/docker-compose.yml
+  "workspaceFolder": "/app",
+
+  "customizations": {
+    "vscode": {
+      // Set *default* container specific settings.json values on container create.
+      "settings": {
+        "cSpell.words": [
+          "devcontainer",
+          "usecase",
+          "Vuetify",
+          "axios",
+          "nuxt"
+        ],
+        "cSpell.ignorePaths": [
+          "vscode-extension",
+          ".git/objects",
+          ".vscode",
+          ".vscode-insiders"
+        ],
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "markdown-preview-enhanced.breakOnSingleNewLine": false,
+        "markdown-preview-enhanced.scrollSync": false,
+        "files.autoSave": "afterDelay",
+        "git-graph.commitDetailsView.location": "Docked to Bottom",
+        "markdown.preview.scrollEditorWithPreview": false,
+        // cSpell: disable
+        "[typescript][vue][javascript]": {
+          "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "always"
+          },
+          "eslint.options": {
+            "overrideConfigFile": "eslint.config.mjs"
+          },
+          "eslint.format.enable": true
+        },
+        // cSpell: enable
+        "eslint.useFlatConfig": true
+      },
+
+      // Add the IDs of extensions you want installed when the container is created.
+      // cSpell: disable
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "oderwat.indent-rainbow",
+        "yzhang.markdown-all-in-one",
+        "shd101wyy.markdown-preview-enhanced",
+        "noy-shimotsuki.hyogai-kanji-checker",
+        "streetsidesoftware.code-spell-checker",
+        "mhutchie.git-graph",
+        "GitHub.vscode-pull-request-github",
+        "eamodio.gitlens",
+        "GitHub.copilot",
+        "kisstkondoros.vscode-codemetrics",
+        "dbaeumer.vscode-eslint",
+        "Vue.volar",
+        "heaths.vscode-guid",
+        "oven.bun-vscode"
+      ]
+      // cSpell: enable
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Uncomment the next line if you want start specific services in your Docker Compose config.
+  // "runServices": [],
+
+  // Uncomment the next line if you want to keep your containers running after VS Code shuts down.
+  "shutdownAction": "none",
+
+  // Uncomment the next line to run commands after the container is created - for example installing curl.
+  "postCreateCommand": "git config --global --add safe.directory /app"
+
+  // Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
+  // "remoteUser": "vscode"
+}
