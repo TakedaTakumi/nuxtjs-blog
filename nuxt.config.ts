@@ -8,10 +8,19 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/eslint',
+    '@nuxt/content',
     'vuetify-nuxt-module',
   ],
   typescript: {
     typeCheck: true,
+  },
+  content: {
+    contentHead: true,
+    highlight: {
+      langs: [
+        'rust',
+      ],
+    },
   },
   eslint: {
     checker: true,
