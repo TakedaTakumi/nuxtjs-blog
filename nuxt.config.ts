@@ -8,11 +8,25 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxt/eslint',
+    '@nuxt/content',
     'vuetify-nuxt-module',
   ],
   typescript: {
     typeCheck: true,
   },
+  content: {
+    contentHead: true,
+    highlight: {
+      langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml'],
+      theme: 'github-light',
+    },
+  },
+  components: [
+    {
+      path: '~/components/content',
+      pathPrefix: false,
+    },
+  ],
   eslint: {
     checker: true,
     config: {
