@@ -1,8 +1,17 @@
+---
+title: TypeScriptサンプルコード - 値オブジェクトの基本型
+description: TypeScriptで値オブジェクトの基本型を実装するサンプルコード
+draft: false
+navigation: true
+---
+
 # TypeScriptサンプルコード - 値オブジェクトの基本型
 
 継承して使う。
 
 Result型は[こちら](./result.md)を参照。
+
+<!--more-->
 
 ```typescript
 export abstract class BaseValueObject<T> {

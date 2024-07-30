@@ -17,11 +17,16 @@ export default defineNuxtConfig({
   content: {
     contentHead: true,
     highlight: {
-      langs: [
-        'rust',
-      ],
+      langs: ['json', 'js', 'ts', 'html', 'css', 'vue', 'shell', 'mdc', 'md', 'yaml'],
+      theme: 'github-light',
     },
   },
+  components: [
+    {
+      path: '~/components/content',
+      pathPrefix: false,
+    },
+  ],
   eslint: {
     checker: true,
     config: {
