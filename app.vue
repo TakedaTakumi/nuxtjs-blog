@@ -3,15 +3,17 @@ import { useTheme } from 'vuetify';
 
 const theme = useTheme();
 
-// theme.global.name.value = 'light';
-theme.global.name.value = 'dark';
+theme.global.name.value = 'light';
+// theme.global.name.value = 'dark';
 </script>
 
 <template>
-  <div>
+  <NuxtLayout>
     <NuxtRouteAnnouncer />
-    <NuxtPage />
-  </div>
+    <v-main>
+      <NuxtPage />
+    </v-main>
+  </NuxtLayout>
 </template>
 
 <style scoped>

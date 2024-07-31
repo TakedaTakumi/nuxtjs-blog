@@ -32,6 +32,15 @@ export default defineNuxtConfig({
       path: '~/components/content',
       pathPrefix: false,
     },
+    {
+      path: '~/components/controller',
+      pathPrefix: true,
+    },
+    {
+      path: '~/components/view',
+      pathPrefix: true,
+    },
+    '~/components',
   ],
   eslint: {
     checker: true,
