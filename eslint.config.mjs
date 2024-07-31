@@ -1,6 +1,6 @@
 // @ts-check
-import withNuxt from './.nuxt/eslint.config.mjs'
 import stylistic from '@stylistic/eslint-plugin';
+import withNuxt from './.nuxt/eslint.config.mjs';
 
 export default withNuxt(
   stylistic.configs['recommended-flat'],
@@ -34,7 +34,15 @@ export default withNuxt(
       ],
       '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       '@stylistic/quote-props': ['error', 'as-needed'],
+      '@stylistic/arrow-parens': ['error', 'always'],
     },
     ignores: ['.idea', '.vscode', '.nuxt', 'public'],
   },
-)
+  {
+    files: ['**/*.vue'],
+    rules: {
+      'vue/no-multiple-template-root': 'off',
+      'vue/multi-word-component-names': 'off',
+    },
+  },
+);

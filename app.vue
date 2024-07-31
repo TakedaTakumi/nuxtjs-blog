@@ -1,6 +1,16 @@
+<script setup lang='ts'>
+
+</script>
+
 <template>
-  <div>
+  <NuxtLayout>
     <NuxtRouteAnnouncer />
-    <NuxtPage />
-  </div>
+    <v-main>
+      <NuxtPage />
+    </v-main>
+  </NuxtLayout>
 </template>
+
+<style scoped>
+
+</style>
