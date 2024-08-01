@@ -7,10 +7,12 @@ services:
       network: host
     volumes:
       - .:/app
-      - frontend-node-modules:/app/node_modules
+      - node-modules:/app/node_modules
+      - dot-pnpm-store:/app/.pnpm-store
       - dot-nuxt:/app/.nuxt
     ports:
       - 3000:3000
 volumes:
-  frontend-node-modules:
+  node-modules:
+  dot-pnpm-store:
   dot-nuxt:

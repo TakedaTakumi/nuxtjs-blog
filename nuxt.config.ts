@@ -2,7 +2,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  css: ['vuetify/lib/styles/main.sass', 'mdi/css/materialdesignicons.min.css'],
+  css: ['vuetify/lib/styles/main.sass'],
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   build: {
@@ -18,7 +18,6 @@ export default defineNuxtConfig({
     },
   ],
   typescript: {
-    typeCheck: true,
   },
   content: {
     contentHead: true,
