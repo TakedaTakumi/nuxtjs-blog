@@ -1,11 +1,12 @@
-FROM oven/bun:latest
+FROM node:latest
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	git \
 	&& rm -rf /var/lib/apt/lists/*
+RUN npm install -g pnpm
 
 WORKDIR /app
 
 COPY . ./
 
-CMD ["/bin/sh", "-c", "bun install && bun run dev -o --host 0.0.0.0"]
+CMD ["/bin/sh", "-c", "pnpm install && pnpm run dev -o --host 0.0.0.0"]
