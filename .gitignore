@@ -25,3 +25,4 @@ logs
 
 .pnpm-store
 local.sh
+.eslintcache
