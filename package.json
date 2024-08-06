@@ -9,7 +9,10 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
@@ -18,11 +21,14 @@
     "vue": "latest"
   },
   "devDependencies": {
+    "@histoire/plugin-nuxt": "^0.17.17",
+    "@histoire/plugin-vue": "^0.17.17",
     "@nuxt/eslint": "^0.4.0",
     "@nuxt/types": "^2.18.1",
     "@nuxt/typescript-build": "^3.0.2",
     "@stylistic/eslint-plugin": "^2.6.1",
     "eslint": "^9.8.0",
+    "histoire": "^0.17.17",
     "sass": "^1.77.8",
     "typescript": "^5.5.4",
     "vite-plugin-eslint2": "^4.4.0",

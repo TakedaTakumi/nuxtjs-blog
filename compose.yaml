@@ -12,6 +12,7 @@ services:
       - dot-nuxt:/app/.nuxt
     ports:
       - 3000:3000
+      - 6006:6006
 volumes:
   node-modules:
   dot-pnpm-store:
